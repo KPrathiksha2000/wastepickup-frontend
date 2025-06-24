@@ -1,6 +1,7 @@
 // frontend/src/pages/AdminPanel.js
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import './AdminPanel.css';
 
 function AdminPanel() {
   const [requests, setRequests] = useState([]);
@@ -37,7 +38,7 @@ function AdminPanel() {
   };
 
   return (
-    <div>
+    <div className="admin-container">
       <h2>Admin Panel</h2>
       <ul>
         {requests.map((req) => (

@@ -36,3 +36,36 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  padding-top: 90px;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('/public/recycle.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  color: #2a7a4f;
+  margin-top: 20px;
+}
+
+nav {
+  text-align: center;
+  margin: 10px 0;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #2a7a4f;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}

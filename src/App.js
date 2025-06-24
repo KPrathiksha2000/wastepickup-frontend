@@ -3,6 +3,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import RequestForm from "./pages/RequestForm";
 import AdminPanel from "./pages/AdminPanel";
+import './App.css';
 
 function App() {
   return (

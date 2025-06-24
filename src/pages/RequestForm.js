@@ -1,6 +1,7 @@
 // frontend/src/pages/RequestForm.js
 import React, { useState } from "react";
 import axios from "axios";
+import './RequestForm.css';
 
 function RequestForm() {
   const [formData, setFormData] = useState({
@@ -26,12 +27,14 @@ function RequestForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form-container">
       <h2>Schedule a Pickup</h2>
       <input name="wasteType" placeholder="Type of Waste" value={formData.wasteType} onChange={handleChange} required />
       <input name="quantity" placeholder="Quantity" value={formData.quantity} onChange={handleChange} required />
       <input name="location" placeholder="Your Location" value={formData.location} onChange={handleChange} required />
-      <button type="submit">Submit</button>
+      <div className='submit-button'>
+        <button type="submit">Submit</button>
+      </div>
     </form>
   );
 }
