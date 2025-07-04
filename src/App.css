@@ -37,6 +37,22 @@
   }
 }
 
+h2.loginheading {
+  text-align: center;
+}
+
+.loginsubmit{
+  max-width: 95%;
+}
+
+.userlogout{
+  max-width: 50%;
+}
+
+button.registerbutton{
+  max-width: 95%
+}
+
 body {
   padding-top: 90px;
   margin: 0;
@@ -68,4 +84,19 @@ nav a {
 
 nav a:hover {
   text-decoration: underline;
+}
+
+.role-selector {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 15px;
+}
+
+.role-selector label {
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }

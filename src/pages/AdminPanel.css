@@ -30,6 +30,17 @@ button {
   border-radius: 5px;
 }
 
-button:hover {
-  background-color: #62c02b;
+button.deleterequest:hover {
+  background-color: #ec0c0c;
+}
+
+button.deleterequest{
+  max-width: 20%;
+}
+
+.adminlogout{
+  max-width: 10%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }

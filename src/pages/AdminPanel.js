@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import './AdminPanel.css';
+import { useNavigate } from "react-router-dom";
+
 
 function AdminPanel() {
   const [requests, setRequests] = useState([]);
@@ -36,6 +38,11 @@ function AdminPanel() {
       console.error("Error deleting request:", err);
     }
   };
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    sessionStorage.clear();
+    navigate("/");
+  };
 
   return (
     <div className="admin-container">
@@ -43,7 +50,8 @@ function AdminPanel() {
       <ul>
         {requests.map((req) => (
           <li key={req._id}>
-            <strong>{req.wasteType}</strong> — {req.quantity} at {req.location}
+            <strong>{req.quantity}</strong> - Waste of type <strong>{req.wasteType}</strong> to be collected from <strong>{req.location}</strong> 
+            <h2> </h2>
             <br />
             Status:{" "}
             <select
@@ -55,11 +63,14 @@ function AdminPanel() {
               <option>Completed</option>
             </select>
 
-            <button onClick={() => deleteRequest(req._id)}>Delete</button>
+            <button onClick={() => deleteRequest(req._id)} className="deleterequest">Delete</button>
             <hr />
           </li>
         ))}
       </ul>
+      <div className="adminlogout">
+        <button onClick={handleLogout} >Logout</button>
+      </div>
     </div>
   );
 }
